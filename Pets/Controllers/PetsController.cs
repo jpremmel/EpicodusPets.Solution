@@ -17,13 +17,6 @@ namespace EpicodusPets.Controllers
             _db = db;
         }
 
-        //GET api/pets
-        [HttpGet]
-        public ActionResult<IEnumerable<Pet>> Get()
-        {
-            return _db.Pets.ToList();
-        }
-
         // POST api/pets
         [HttpPost]
         public void Post([FromBody] Pet pet)
@@ -65,6 +58,48 @@ namespace EpicodusPets.Controllers
             var petToDelete = _db.Pets.FirstOrDefault(entry => entry.PetId == id);
             _db.Pets.Remove(petToDelete);
             _db.SaveChanges();
+        }
+
+        // GET api/pets
+        [HttpGet]
+        public ActionResult<IEnumerable<Pet>> Get(string species, string gender, string name, string breed, string description, string favoriteThings, string leastFavoriteThings, string owner)
+        {
+            var query = _db.Pets.AsQueryable();
+
+            if(species != null)
+            {
+                query = query.Where(entry => entry.Species.ToLower().Contains(species.ToLower()));
+            }
+            if(gender != null)
+            {
+                query = query.Where(entry => entry.Gender.ToLower().Contains(gender.ToLower()));
+            }
+            if(name != null)
+            {
+                query = query.Where(entry => entry.Name.ToLower().Contains(name.ToLower()));
+            }
+            if(breed != null)
+            {
+                query = query.Where(entry => entry.Breed.ToLower().Contains(breed.ToLower()));
+            }
+            if(description != null)
+            {
+                query = query.Where(entry => entry.Description.ToLower().Contains(description.ToLower()));
+            }
+            if(favoriteThings != null)
+            {
+                query = query.Where(entry => entry.FavoriteThings.ToLower().Contains(favoriteThings.ToLower()));
+            }
+            if(leastFavoriteThings != null)
+            {
+                query = query.Where(entry => entry.LeastFavoriteThings.ToLower().Contains(leastFavoriteThings.ToLower()));
+            }
+            if(owner != null)
+            {
+                query = query.Where(entry => entry.Owner.ToLower().Contains(owner.ToLower()));
+            }
+
+            return query.ToList();
         }
     }
 }
