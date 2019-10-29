@@ -109,20 +109,20 @@ namespace EpicodusPets.Controllers
             return query.ToList();
         }
 
-        [HttpPost("upload")]
-        public async Task Upload([FromForm] IFormFile file)
-        {
-            System.Console.WriteLine("Upload triggered");
+        // [HttpPost("upload")]
+        // public async Task Upload([FromForm] IFormFile file)
+        // {
+        //     System.Console.WriteLine("Upload triggered");
 
-            var uploads = Path.Combine(hostingEnvironment.WebRootPath, "uploads");
-            if(file.Length > 0)
-            {
-                using(var fileStream = new FileStream(Path.Combine(uploads, file.FileName), FileMode.Create))
-                {
-                    await file.CopyToAsync(fileStream);
-                }
-            }
-        }
+        //     var uploads = Path.Combine(hostingEnvironment.WebRootPath, "uploads");
+        //     if(file.Length > 0)
+        //     {
+        //         using(var fileStream = new FileStream(Path.Combine(uploads, file.FileName), FileMode.Create))
+        //         {
+        //             await file.CopyToAsync(fileStream);
+        //         }
+        //     }
+        // }
 
         [HttpGet("{id}/photo")]
         public IActionResult GetPhoto(int id)
