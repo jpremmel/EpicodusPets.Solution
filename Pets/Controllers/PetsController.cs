@@ -3,6 +3,11 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using EpicodusPets.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Hosting;
+using System.Threading.Tasks;
+using System.IO;
+using Microsoft.AspNetCore.Http;
+using System.Drawing;
 
 namespace EpicodusPets.Controllers
 {
@@ -11,10 +16,12 @@ namespace EpicodusPets.Controllers
     public class PetsController : ControllerBase
     {
         private PetsContext _db;
+        private readonly IHostingEnvironment hostingEnvironment;
 
-        public PetsController(PetsContext db)
+        public PetsController(PetsContext db, IHostingEnvironment environment)
         {
             _db = db;
+            hostingEnvironment = environment;
         }
 
         // POST api/pets
@@ -101,5 +108,30 @@ namespace EpicodusPets.Controllers
 
             return query.ToList();
         }
+
+        [HttpPost("upload")]
+        public async Task Upload([FromForm] IFormFile file)
+        {
+            System.Console.WriteLine("Upload triggered");
+
+            var uploads = Path.Combine(hostingEnvironment.WebRootPath, "uploads");
+            if(file.Length > 0)
+            {
+                using(var fileStream = new FileStream(Path.Combine(uploads, file.FileName), FileMode.Create))
+                {
+                    await file.CopyToAsync(fileStream);
+                }
+            }
+        }
+
+        [HttpGet("{id}/photo")]
+        public IActionResult GetPhoto(int id)
+        {
+            string path = _db.Pets.FirstOrDefault(entry => entry.PetId == id).PhotoPath;
+            FileStream stream = System.IO.File.Open(@path, System.IO.FileMode.Open);
+            return File(stream, "image/jpg");
+        }
+    
+
     }
 }

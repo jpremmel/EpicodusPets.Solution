@@ -2,14 +2,16 @@
 using EpicodusPets.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Pets.Migrations
 {
     [DbContext(typeof(PetsContext))]
-    partial class PetsContextModelSnapshot : ModelSnapshot
+    [Migration("20191029174334_SeedDataPhotos")]
+    partial class SeedDataPhotos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
