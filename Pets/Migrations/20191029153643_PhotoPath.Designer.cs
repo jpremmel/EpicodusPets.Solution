@@ -2,14 +2,16 @@
 using EpicodusPets.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Pets.Migrations
 {
     [DbContext(typeof(PetsContext))]
-    partial class PetsContextModelSnapshot : ModelSnapshot
+    [Migration("20191029153643_PhotoPath")]
+    partial class PhotoPath
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -57,7 +59,6 @@ namespace Pets.Migrations
                             LeastFavoriteThings = "Grooming, vet visits, guitars, being cold, being alone",
                             Name = "Sylvie",
                             Owner = "Jacqueline",
-                            PhotoPath = "wwwroot/uploads/sylvie-jacqueline.jpg",
                             Species = "Dog"
                         },
                         new
@@ -71,7 +72,6 @@ namespace Pets.Migrations
                             LeastFavoriteThings = "Grooming, vet visits, raspberries (not the food), being alone",
                             Name = "Bridget",
                             Owner = "Jason",
-                            PhotoPath = "wwwroot/uploads/bridget-jason.jpg",
                             Species = "Dog"
                         },
                         new
@@ -85,7 +85,6 @@ namespace Pets.Migrations
                             LeastFavoriteThings = "Toe touches, Watching his brother get affection, Being hungry ",
                             Name = "Chunk",
                             Owner = "Sofia",
-                            PhotoPath = "wwwroot/uploads/chunk-sofia.jpg",
                             Species = "Cat"
                         },
                         new
@@ -99,7 +98,6 @@ namespace Pets.Migrations
                             LeastFavoriteThings = "Loud noises, Strangers, Sudden movements, Vacuum",
                             Name = "Toad",
                             Owner = "Sofia",
-                            PhotoPath = "wwwroot/uploads/toad-sofia.jpg",
                             Species = "Cat"
                         },
                         new
@@ -113,7 +111,6 @@ namespace Pets.Migrations
                             LeastFavoriteThings = "The vacuum, being picked up, having his nails clipped",
                             Name = "Winston",
                             Owner = "Mike",
-                            PhotoPath = "wwwroot/uploads/winston-mike.jpg",
                             Species = "Cat"
                         },
                         new
@@ -127,7 +124,6 @@ namespace Pets.Migrations
                             LeastFavoriteThings = "Boxes, rain, baths, anything outdoors (except snow)",
                             Name = "Roscoe",
                             Owner = "Jen",
-                            PhotoPath = "wwwroot/uploads/roscoe-jen.jpg",
                             Species = "Dog"
                         },
                         new
@@ -141,7 +137,6 @@ namespace Pets.Migrations
                             LeastFavoriteThings = "Rain and being told what to do",
                             Name = "Mau",
                             Owner = "Micah",
-                            PhotoPath = "wwwroot/uploads/mau-micah.jpg",
                             Species = "Cat"
                         },
                         new
@@ -154,8 +149,7 @@ namespace Pets.Migrations
                             Gender = "Male",
                             LeastFavoriteThings = "Rain. Loud Noises.",
                             Name = "Jasper",
-                            Owner = "Erin(Chris's wife)",
-                            PhotoPath = "wwwroot/uploads/jasper-chris.jpg",
+                            Owner = "Erin",
                             Species = "Dog"
                         },
                         new
@@ -169,7 +163,6 @@ namespace Pets.Migrations
                             LeastFavoriteThings = "Rain and being told what to do",
                             Name = "Wren",
                             Owner = "Chris",
-                            PhotoPath = "wwwroot/uploads/wren-chris.jpg",
                             Species = "Dog"
                         },
                         new
@@ -183,78 +176,7 @@ namespace Pets.Migrations
                             LeastFavoriteThings = "Limes",
                             Name = "Molly",
                             Owner = "Christine",
-                            PhotoPath = "wwwroot/uploads/molly-christine.jpg",
                             Species = "Dog"
-                        },
-                        new
-                        {
-                            PetId = 11,
-                            Age = 3,
-                            Breed = "Ball Python",
-                            Description = "Very Curious, loves to get into trouble spots.",
-                            FavoriteThings = "Climbing Branches.",
-                            Gender = "Female",
-                            LeastFavoriteThings = "Fast Movement",
-                            Name = "Uwa",
-                            Owner = "Erin",
-                            PhotoPath = "wwwroot/uploads/uwa-erin.jpg",
-                            Species = "Snake"
-                        },
-                        new
-                        {
-                            PetId = 12,
-                            Age = 4,
-                            Breed = "Russian Blue Mix",
-                            Description = "Fluffy, talkative, will steal your cheese.",
-                            FavoriteThings = "Pets and butt scratches",
-                            Gender = "Female",
-                            LeastFavoriteThings = "Thunder and Vacuums",
-                            Name = "Mocha",
-                            Owner = "Erin",
-                            PhotoPath = "wwwroot/uploads/mocha-erin.jpg",
-                            Species = "Cat"
-                        },
-                        new
-                        {
-                            PetId = 13,
-                            Age = 1,
-                            Breed = "Unknown",
-                            Description = "Dangerous",
-                            FavoriteThings = "Total domination, sleeping",
-                            Gender = "Male",
-                            LeastFavoriteThings = "Being locked up",
-                            Name = "Stripes",
-                            Owner = "Carrie",
-                            PhotoPath = "wwwroot/uploads/stripes-carrie.jpg",
-                            Species = "Cat"
-                        },
-                        new
-                        {
-                            PetId = 14,
-                            Age = 3,
-                            Breed = "Coonhound/Lab",
-                            Description = "The best dog ever",
-                            FavoriteThings = "hikes",
-                            Gender = "Female",
-                            LeastFavoriteThings = "shower",
-                            Name = "Kima",
-                            Owner = "Joel",
-                            PhotoPath = "wwwroot/uploads/kima-joel.jpg",
-                            Species = "Dog"
-                        },
-                        new
-                        {
-                            PetId = 15,
-                            Age = 6,
-                            Breed = "Domestic short hair",
-                            Description = "Has an adorable moustache",
-                            FavoriteThings = "sleeping",
-                            Gender = "Male",
-                            LeastFavoriteThings = "screaming toddlers",
-                            Name = "Ashford",
-                            Owner = "Anita",
-                            PhotoPath = "wwwroot/uploads/ashford-anita.jpg",
-                            Species = "Cat"
                         });
                 });
 #pragma warning restore 612, 618

@@ -1,3 +1,6 @@
+using System.Drawing;
+using static System.Net.Mime.MediaTypeNames;
+
 namespace EpicodusPets.Models
 {
     public class Pet
@@ -12,5 +15,7 @@ namespace EpicodusPets.Models
         public string FavoriteThings { get; set; }
         public string LeastFavoriteThings { get; set; }
         public string Owner { get; set; }
+        public string PhotoPath { get; set; }
+
     }
 }
