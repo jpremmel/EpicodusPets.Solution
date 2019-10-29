@@ -29,7 +29,7 @@ namespace EpicodusPets.Models
 
                     new Pet { PetId = 7, Name = "Mau", Species = "Cat", Breed = "Medium-hair Domestic Feline", Age = 1, Gender = "Female", Description = "Mau is friendly to a fault.", FavoriteThings = "Mau enjoys taking naps and climbing house plants.", LeastFavoriteThings = "Rain and being told what to do", Owner = "Micah", PhotoPath = "wwwroot/uploads/mau-micah.jpg" },
 
-                    new Pet { PetId = 8, Name = "Jasper", Species = "Dog", Breed = "Dutch Shepherd", Age = 12, Gender = "Male", Description = "A scary looking dog that is a true sweetheart", FavoriteThings = "Jasper loves stuffed toys, food, cheese, and water", LeastFavoriteThings = "Rain. Loud Noises.", Owner = "Erin(Chris's wife)", PhotoPath = "wwwroot/uploads/jasper-chris.jpg" },
+                    new Pet { PetId = 8, Name = "Jasper", Species = "Dog", Breed = "Dutch Shepherd", Age = 12, Gender = "Male", Description = "A scary looking dog that is a true sweetheart", FavoriteThings = "Jasper loves stuffed toys, food, cheese, and water", LeastFavoriteThings = "Rain. Loud Noises.", Owner = "Erin (Chris's wife)", PhotoPath = "wwwroot/uploads/jasper-chris.jpg" },
 
                     new Pet { PetId = 9, Name = "Wren", Species = "Dog", Breed = "Australian Cattledog", Age = 4, Gender = "Female", Description = "Wren is a red heeler that loves to pick on other dogs", FavoriteThings = "Wren loves chasing her favorite toy at the park, she loves belly rubs, and cheese.", LeastFavoriteThings = "Rain and being told what to do", Owner = "Chris", PhotoPath = "wwwroot/uploads/wren-chris.jpg" },
 
@@ -43,7 +43,11 @@ namespace EpicodusPets.Models
 
                     new Pet { PetId = 14, Name = "Kima", Species = "Dog", Breed = "Coonhound/Lab", Age = 3, Gender = "Female", Description = "The best dog ever", FavoriteThings = "hikes", LeastFavoriteThings = "shower", Owner = "Joel", PhotoPath = "wwwroot/uploads/kima-joel.jpg" },
 
-                    new Pet { PetId = 15, Name = "Ashford", Species = "Cat", Breed = "Domestic short hair", Age = 6, Gender = "Male", Description = "Has an adorable moustache", FavoriteThings = "sleeping", LeastFavoriteThings = "screaming toddlers", Owner = "Anita", PhotoPath = "wwwroot/uploads/ashford-anita.jpg" }
+                    new Pet { PetId = 15, Name = "Ashford", Species = "Cat", Breed = "Domestic short hair", Age = 6, Gender = "Male", Description = "Has an adorable moustache", FavoriteThings = "sleeping", LeastFavoriteThings = "screaming toddlers", Owner = "Anita", PhotoPath = "wwwroot/uploads/ashford-anita.jpg" },
+
+                    new Pet { PetId = 16, Name = "Jasper", Species = "Cat", Breed = "Mixed Breed Maine Coon", Age = 2, Gender = "Male", Description = "Very sassy when restless but irresistably cute when sleepy", FavoriteThings = "Paper bags, boxes, being gently stroked on the nose while falling asleep", LeastFavoriteThings = "Sylvie", Owner = "Will (Jacqueline's roommate)", PhotoPath = "wwwroot/uploads/jasper-jacqueline.jpg" },
+
+                    new Pet { PetId = 17, Name = "Levi", Species = "Dog", Breed = "Dachshund mix", Age = 5, Gender = "Male", Description = "#1 Handsy Boy", FavoriteThings = "Wearing clothes and playing with the hose", LeastFavoriteThings = "strangers, other dogs playing with his toys", Owner = "Joey (Jason's brother)", PhotoPath = "wwwroot/uploads/levi-jason.jpg" }
                 );
         }
     }
