@@ -43,7 +43,11 @@ namespace EpicodusPets.Models
 
                     new Pet { PetId = 14, Name = "Kima", Species = "Dog", Breed = "Coonhound/Lab", Age = 3, Gender = "Female", Description = "The best dog ever", FavoriteThings = "hikes", LeastFavoriteThings = "shower", Owner = "Joel", PhotoPath = "wwwroot/uploads/kima-joel.jpg" },
 
-                    new Pet { PetId = 15, Name = "Ashford", Species = "Cat", Breed = "Domestic short hair", Age = 6, Gender = "Male", Description = "Has an adorable moustache", FavoriteThings = "sleeping", LeastFavoriteThings = "screaming toddlers", Owner = "Anita", PhotoPath = "wwwroot/uploads/ashford-anita.jpg" }
+                    new Pet { PetId = 15, Name = "Ashford", Species = "Cat", Breed = "Domestic short hair", Age = 6, Gender = "Male", Description = "Has an adorable moustache", FavoriteThings = "sleeping", LeastFavoriteThings = "screaming toddlers", Owner = "Anita", PhotoPath = "wwwroot/uploads/ashford-anita.jpg" },
+
+                    new Pet { PetId = 16, Name = "Jasper", Species = "Cat", Breed = "Mixed Breed Maine Coon", Age = 2, Gender = "Male", Description = "Very sassy when restless but irresistably cute when sleepy", FavoriteThings = "Paper bags, boxes, being gently stroked on the nose while falling asleep", LeastFavoriteThings = "Sylvie", Owner = "Will (Jacqueline's roommate)", PhotoPath = "wwwroot/uploads/jasper-jacqueline.jpg" },
+
+                    new Pet { PetId = 17, Name = "Levi", Species = "Dog", Breed = "Dachshund mix", Age = 5, Gender = "Male", Description = "#1 Handsy Boy", FavoriteThings = "Wearing clothes and playing with the hose", LeastFavoriteThings = "strangers, other dogs playing with his toys", Owner = "Joey (Jason's brother)", PhotoPath = "wwwroot/uploads/levi-jason.jpg" }
                 );
         }
     }
