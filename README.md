@@ -18,6 +18,11 @@ The purpose of this project was to practice building an API that provides inform
 * _Run the command "dotnet watch run"_
 * _To visit Swagger documentation, go to the URL "http://localhost:5000/swagger/" in a browser_
 
+<img src="pets-api-swagger.png"
+     alt="Screenshot of Swagger documentation for the Epicodus Pets API"
+     style="float: center" 
+     height= "600" /> 
+
 ## Technologies Used
 
 _C# .NET, MySQL, Entity, Swashbuckle/Swagger_
